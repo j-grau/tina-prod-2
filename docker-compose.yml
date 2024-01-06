@@ -2,11 +2,10 @@ version: '3'
 services:
   node:
     build: .
-    container_name: "apst_site_tina_DEL"
+    container_name: "apst_site_tina_DEL_GP"
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb+srv://tina:tina@rscluster.5tr25vk.mongodb.net/?retryWrites=true&w=majority
     volumes:      
       - ./tina:/home/node/app/tina
       - ./app:/home/node/app/app

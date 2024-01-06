@@ -53,6 +53,12 @@ const handler = TinaNodeBackend({
   databaseClient,
 });
 
+const handlerLocal = TinaNodeBackend({
+  authProvider: LocalBackendAuthProvider(),
+  databaseClient,
+});
+
+
 const handleTina: RequestHandler = async (req, res) => {
   req.query = {
     ...(req.query || {}),
