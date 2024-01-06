@@ -1,0 +1,30 @@
+version: '3'
+services:
+  node:
+    build: .
+    container_name: "apst_site_tina_DEL"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb+srv://tina:tina@rscluster.5tr25vk.mongodb.net/?retryWrites=true&w=majority
+    volumes:      
+      - ./tina:/home/node/app/tina
+      - ./app:/home/node/app/app
+      - ./components:/home/node/app/components
+      - ./content:/home/node/app/content
+      - ./pages:/home/node/app/pages
+      - ./public:/home/node/app/public
+      - ./package.json:/home/node/app/package.json
+      - ./.env:/home/node/app/.env
+      - ./.git:/home/node/app/.git
+
+    ports:
+      - "3000:3000"
+      - "4001:4001"
+      - "9001:9001"
+    command: sh -c "yarn build && yarn start"
+    #command: "yarn dev:prod"
+
+volumes:
+  nextdata:
+   driver: local        
