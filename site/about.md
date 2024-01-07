@@ -1,8 +1,6 @@
 ---
-title: About us
+title: About us AKAAK
 layout: layout
 ---
 
-This is the about us page.asdasdasd
-
-asdasd
+This is the about us page.
