@@ -1,5 +1,5 @@
 ---
-title: About us AKAAK
+title: About us OK
 layout: layout
 ---
 
